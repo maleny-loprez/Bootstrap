@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Proyecto con BOOTSTRAP</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- bootstrap 4-->
+	<link rel="stylesheet" type="text/css" href="plugins/bootstrap/css/bootstrap.min.css">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="plugins/fontawesome-free-5.8.1-web/css/all.min.css">
+	<!-- Estilo personalizado -->
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<!-- bootstrap-toggle-master -->
+	<link href="plugins/bootstrap-toggle-master/css/bootstrap-toggle.css" rel="stylesheet">
+	<link href="plugins/bootstrap-toggle-master/stylesheet.css" rel="stylesheet">
+	<!-- alertify -->
+	<link href="plugins/alertifyjs/css/alertify.css" rel="stylesheet">	
+	<link href="plugins/alertifyjs/css/themes/default.css" rel="stylesheet">	
+	<!-- animate -->
+	<link rel="stylesheet" href="plugins/animate/animate.css">
+</head>
+<body>
+	<header>
+
+		<!-- encabezado -->
+		<section class="contenedor iconos fondo">
+
+			<ul class="nav-pills pull-right menu-bar">
+				<li class="list-unstyled">
+					<a href="#" class="color  borde animated bounceIn" id="menuV">
+						<i class="fas fa-bars"></i>
+					</a>
+				</li>
+				<li class="list-unstyled espIco">
+					<a href="#" class="color borde animated bounceIn" data-toggle="modal" data-target="#miModal">
+						<i class="far fa-user-circle"></i>
+					</a>
+				</li>
+				<li class="list-unstyled espIco" id="icoSalir">
+					<a href="#" onclick="salir();" class="color borde animated bounceIn">
+						<i class="fas fa-sign-out-alt"></i>
+					</a>
+				</li>
+
+				<h2 class="fondo usuario">Maleny López</h2>
+
+			</ul>
+			
+			<!-- <div class="container" style="margin:5px;">
+				<div class="row">
+						<div class="col-md-12">
+							<ol class="breadcrumb">
+								<li><a href="#">Inicio</a></li>
+								<li><a href="#">Categoria #1</a></li>
+								<li class="active">Articulo #</li>
+							</ol>
+						</div>
+				</div>
+			</div> -->
+			<h2 class="fondo  empresa"> Instituto Tecnológico de Linares - Programación WEB</h2>
+
+			
+				
+		</section>
+		<!-- encabezado -->
+	</header><!-- /header -->	
+	<div class="container-fluid tamContenido" >
+		<div class="row">
+			<div class="col-xs-0 col-sm-3 col-md-2 col-lg-2 vertical">
+			<!-- sidebar -->
+				<div class="sidebar fondo borde sombra animated bounceIn" id="mnuLateral">
+					<h2 class="fondo mLateral">Menú</h2>
+					<ul class="menuv">
+						<li class="list-unstyled icoMedia">
+							<a href="index.html" class="activo fasLink">
+								<i class="fas fa-square fa-lg fasIco"></i> <label class="lblIco"> Carpetas del curso</label>
+							</a>
+						</li>					
+						
+						<!-- <li class="list-unstyled icoMedia">
+							<a href="#" class="fasLink" onclick="salir();">
+								<i class="fas fa-sign-out-alt fa-lg fasIco"></i> <label class="lblIco">	Salir
+								</label>
+							</a>
+						</li > -->
+					</ul>
+					<br>
+					<br>
+					<br>
+					<!-- Acordeon -->
+						<!-- <div class="col-xs-0 col-sm-3 col-md-2 col-lg-2 vertical">
+							<div class="panel-group animated bounceIn menuv" id="accordion" role="tablist">
+								<h4 class="panel-title colors s">Elementos utilizados:</h4>
+								<div class="panel panel-default">									
+									<div class="panel-heading zoomIn" role="tab" id="heading1">
+										<h4 class="panel-title colors">
+											<a  href="#collapse1" data-toggle="collapse" data-parent="#accordion">
+												1.- Breadcrumbs
+											</a>
+										</h4>
+									</div>
+	
+									<div id="collapse1" class="panel-collapse collapse ">
+										<div class="panel-body colors">
+											Para indicar al usuario en que carpeta se encuentra y pueda volver al inicio.
+										</div>
+									</div>
+								</div>
+	
+								<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="heading2">
+											<h4 class="panel-title  colors">
+												<a  href="#collapse2" data-toggle="collapse" data-parent="#accordion">
+													Encabezado #2
+												</a>
+											</h4>
+										</div>
+						
+										<div id="collapse2" class="panel-collapse collapse ">
+											<div class="panel-body colors">
+												Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio officiis ducimus sit, soluta labore assumenda amet culpa cum debitis alias odit aliquid quod, dicta aspernatur blanditiis fugiat! Doloremque, atque illum?
+											</div>
+										</div>
+								</div>
+								
+								<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="heading3">
+											<h4 class="panel-title  colors">
+												<a href="#collapse3" data-toggle="collapse" data-parent="#accordion">
+													Encabezado #3
+												</a>
+											</h4>
+										</div>
+						
+										<div id="collapse3" class="panel-collapse collapse ">
+											<div class="panel-body colors">
+												Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio officiis ducimus sit, soluta labore assumenda amet culpa cum debitis alias odit aliquid quod, dicta aspernatur blanditiis fugiat! Doloremque, atque illum?
+											</div>
+										</div>
+								</div>
+							</div>
+						</div> -->
+						<!-- Dropdown -->
+						<div class="dropdown centrar">
+								<button class="btn btn-default dropdown-toggle " style="background-color: #200122; color:#fff;" type="button" id="dropdownmenu1" data-toggle="dropdown" aria-expanded="true">
+									Elementos usados
+									<span class="badge" class="caret" >7</span>
+								</button>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownmenu1">
+									<li class="divider"></li>
+									<!-- li*4>a[href="#"]{Item#$} -->
+									<li role="presentation"><a role="item" href="#" data-toggle="modal" data-target="#miModal2">Breadcrumb</a></li>
+									<li role="presentation"><a role="item" href="#" data-toggle="modal" data-target="#miModal3">Insignia</a></li>
+									<li role="presentation"><a role="item" href="#" data-toggle="modal" data-target="#miModal4">Modal</a></li>
+									<li role="presentation"><a role="item" href="#" data-toggle="modal" data-target="#miModal5">Herr.Responsivas</a></li>
+									<li role="presentation"><a role="item" href="#" data-toggle="modal" data-target="#miModal6">Sidebar</a></li>
+									<li role="presentation"><a role="item" href="#" data-toggle="modal" data-target="#miModal7">Dropdown</a></li>
+									<li role="presentation"><a role="item" href="#" data-toggle="modal" data-target="#miModal8">Tipografía</a></li>
+									
+								</ul>
+							</div>
+				</div>
+			<!-- sidebar -->
+			</div>
+			<div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 cont">
+			   <div class="titulo borde sombra">
+					<div class="container animated zoomIn"  style="margin:0px;padding: 0px;" >
+							<div class="row" >
+									<div class="hidden-xs col-sm-9 col-md-10 col-lg-10" >
+										<ol class="breadcrumb">
+											<li><a href="#" class="colors">7° Semestre</a></li>
+											<li><a href="#" class="colors">Programación WEB</a></li>
+											<li class="active">Proyecto</li>
+										</ol>
+									</div>
+							</div>
+					</div>
+
+					<h3 class="animated zoomIn tPrincipal">Pryecto final de la unidad con BOOTSTRAP</h3>
+					
+			   </div>	
+			   <div class="contenido borde sombra" style="padding-right:18px;">
+				   <div class="row">
+						<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+							<div class="caja animated slideInUp">
+								<i class="glyphicon glyphicon-indent-left"></i>
+								<p><a href="1-INTRODUCCION/index.html" target="blank" class="cenlace">1:Introducción</a></p>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+							<div class="caja animated slideInUp">
+								<i class="glyphicon glyphicon-modal-window"></i>
+								<p><a href="2-LA_GRID/index.html" target="blank" class="cenlace">2:Grid</a></p>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+							<div class="caja animated slideInUp">
+								<i class="glyphicon glyphicon-text-size"></i>
+								<p><a href="3-TIPOGRAFIA_TEXTO/index.html" target="blank" class="cenlace">3:Tipografía Texto</a></p>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+							<div class="caja animated slideInUp">
+								<i class="glyphicon glyphicon-list-alt"></i>
+								<p><a href="4-TABLAS/index.html" target="blank" class="cenlace">4:Tablas</a></p>
+							</div>
+						</div>					
+						<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+							<div class="caja animated slideInUp">
+								<i class="glyphicon glyphicon-saved"></i>
+								<p><a href="5-FORMULARIOS/index.html" target="blank" class="cenlace">5:Formularios</a></p>
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+								<div class="caja animated slideInUp">
+									<i class="glyphicon glyphicon-play"></i>
+									<p><a href="6-BOTONES/index.html" target="blank" class="cenlace">6:Botones</a></p>
+								</div>
+						</div>	
+
+						<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+								<div class="caja animated slideInUp">
+									<i class="glyphicon glyphicon-picture"></i>
+									<p><a href="7-IMAGENES/index.html" target="blank" class="cenlace">7:Imagenes</a></p>
+								</div>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+							<div class="caja animated slideInUp">
+								<i class="glyphicon glyphicon-align-left"></i>
+								<p><a href="8-CLASES_AUXILIARES/index.html" target="blank" class="cenlace">8:Clases Aux</a></p>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+							<div class="caja animated slideInUp">
+								<i class="glyphicon glyphicon-resize-small"></i>
+								<p><a href="9-HERRAMIENTAS_RESPONSIVAS/index.html" target="blank" class="cenlace">9:Herr. Responsivas</a></p>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+							<div class="caja animated slideInUp">
+								<i class="glyphicon glyphicon-option-horizontal"></i>
+								<p><a href="10-ICONOS/index.html" target="blank" class="cenlace">10:Iconos</a></p>
+							</div>
+						</div>					
+						<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+							<div class="caja animated slideInUp">
+								<i class="glyphicon glyphicon-sort-by-attributes-alt"></i>
+								<p><a href="11-DROPDOWN/index.html" target="blank" class="cenlace">11:Dropdown</a></p>
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+								<div class="caja animated slideInUp">
+									<i class="glyphicon glyphicon-equalizer"></i>
+									<p><a href="12-GRUPO_BOTONES/index.html" target="blank" class="cenlace">12:Grupo Botones</a></p>
+								</div>
+						</div>	
+						
+						<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+								<div class="caja animated slideInUp">
+									<i class="glyphicon glyphicon-collapse-down"></i>
+									<p><a href="13-DROPDOWN_BUTTONS/index.html" target="blank" class="cenlace">13:DropButtons</a></p>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+								<div class="caja animated slideInUp">
+									<i class="glyphicon glyphicon-record"></i>
+									<p><a href="14-INPUT_GRUPOS/index.html" target="blank" class="cenlace">14:InputGrupos</a></p>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+								<div class="caja animated slideInUp">
+									<i class="glyphicon glyphicon-home"></i>
+									<p><a href="15-NAVEGACIONES/index.html" target="blank" class="cenlace">15:Navegaciones</a></p>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+								<div class="caja animated slideInUp">
+									<i class="glyphicon glyphicon-search"></i>
+									<p><a href="16-NAVBARS/index.html" target="blank" class="cenlace">16:Navbars</a></p>
+								</div>
+							</div>					
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+								<div class="caja animated slideInUp">
+									<i class="glyphicon glyphicon-chevron-right"></i>
+									<p><a href="17-BREADCRUMS/index.html" target="blank" class="cenlace">17:Breadcrumbs</a></p>
+								</div>
+							</div>
+	
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+								<div class="caja animated slideInUp">
+									<i class="glyphicon glyphicon-sound-5-1"></i>
+									<p><a href="18-PAGINACION/index.html" target="blank" class="cenlace">18:Paginación</a></p>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+									<div class="caja animated slideInUp">
+										<i class="glyphicon glyphicon-text-background"></i>
+										<p><a href="19-ETIQUETAS/index.html" target="blank" class="cenlace">19:Etiquetas</a></p>
+									</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+									<div class="caja animated slideInUp">
+										<i class="glyphicon glyphicon-info-sign"></i>
+										<p><a href="20-INSIGNIAS/index.html" target="blank" class="cenlace">20:Insignias</a></p>
+									</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+									<div class="caja animated slideInUp">
+										<i class="glyphicon glyphicon-resize-full"></i>
+										<p><a href="21-JUMBOTRON/index.html" target="blank" class="cenlace">21:Jumbotron</a></p>
+									</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+									<div class="caja animated slideInUp">
+										<i class="glyphicon glyphicon-text-size"></i>
+										<p><a href="22-ENCABEZADOS/index.html" target="blank" class="cenlace">22:Encabezados</a></p>
+									</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+									<div class="caja animated slideInUp">
+										<i class="glyphicon glyphicon-object-align-top"></i>
+										<p><a href="23-MINIATURAS/index.html" target="blank" class="cenlace">23:Miniaturas</a></p>
+									</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+									<div class="caja animated slideInUp">
+										<i class="glyphicon glyphicon-alert"></i>
+										<p><a href="24-ALERTAS/index.html" target="blank" class="cenlace">24:Alertas</a></p>
+									</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+								<div class="caja animated slideInUp">
+									<i class="glyphicon glyphicon-tasks"></i>
+									<p><a href="25-PROGRESS_BAR/index.html" target="blank" class="cenlace">25:ProgressBar</a></p>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+									<div class="caja animated slideInUp">
+										<i class="glyphicon glyphicon-list"></i>
+										<p><a href="26-GRUPOS_LISTA/index.html" target="blank" class="cenlace">26:GruposListas</a></p>
+									</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+									<div class="caja animated slideInUp">
+										<i class="glyphicon glyphicon-th-large"></i>
+										<p><a href="27-MEDIA_OBJECT/index.html" target="blank" class="cenlace">27:MediaObject</a></p>
+									</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+									<div class="caja animated slideInUp">
+										<i class="glyphicon glyphicon-check"></i>
+										<p><a href="28-PANELES/index.html" target="blank" class="cenlace">28:Paneles</a></p>
+									</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+										<div class="caja animated slideInUp">
+											<i class="glyphicon glyphicon-screenshot"></i>
+											<p><a href="29-MODALES/index.html" target="blank" class="cenlace">29:Modales</a></p>
+										</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+										<div class="caja animated slideInUp">
+											<i class="glyphicon glyphicon-option-vertical"></i>
+											<p><a href="30-SCROLLSPY/index.html" target="blank" class="cenlace">30:Scrollspy</a></p>
+										</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+									<div class="caja animated slideInUp">
+										<i class="glyphicon glyphicon-sort"></i>
+										<p><a href="31-ACORDENON/index.html" target="blank" class="cenlace">31:Acordeón</a></p>
+									</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+									<div class="caja animated slideInUp">
+										<i class="glyphicon glyphicon-flash"></i>
+										<p><a href="32-TABS_DINAMICAS/index.html" target="blank" class="cenlace">32:TabsDina</a></p>
+									</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+										<div class="caja animated slideInUp">
+											<i class="glyphicon glyphicon-picture"></i>
+											<p><a href="33-SLIDESHOW/index.html" target="blank" class="cenlace">33:Slideshow</a></p>
+										</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+										<div class="caja animated slideInUp">
+											<i class="glyphicon glyphicon-globe"></i>
+											<p><a href="34-LAYOUT/index.html" target="blank" class="cenlace">34:Layout</a></p>
+										</div>
+							</div>
+					</div>					
+				</div>	
+			</div>							
+		</div>		
+	</div>
+	<footer class="fondo">
+		<div class="copyright">
+				@ 2019 Perez Maleny | <a href="" class="linkf">ISIC/Estudiante</a>
+			</div>
+			<div class="information">
+				Politicas y privacidad | <a href="" class="linkf">ISIC/ITL</a>
+		</div>	
+	</footer>
+
+	<div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h3 class="modal-title  tPrincipal">Información del Estudiante</h3>
+				</div>
+				<div class="modal-body animated flipInX">
+						<img src="imagenes/maleny.jpg" class="img-thumbnail mImg">
+						<h4 class="tPrincipal colorLetra centrar">
+							Proyecto final con curso de bootsrap
+						</h4>
+
+						<h4 class="tPrincipal colorLetra centrar">
+							Elaborado por: Maleny Lizbeth López Pérez
+						</h4>
+
+						<h4 class="tPrincipal colorLetra centrar">
+							Programación WEB
+						</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="miModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h3 class="modal-title  tPrincipal centrar">Breadcrumb</h3>
+					</div>
+					<div class="modal-body animated flipInX" >
+							<img src="imagenes/bread.JPG" style="width:80%;margin-left:50px; margin-right:50px; " class=" img-thumbnail mImg">
+							<br> <br> <br> <br>
+							<h4 class="tPrincipal colorLetra centrar">
+								Para indicar en que parte estamos situados, en el Proyecto de la materia de Programación Web de 7° Semestre. 
+							</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="miModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h3 class="modal-title  tPrincipal centrar">Insignia</h3>
+						</div>
+						<div class="modal-body animated flipInX" >
+								<img src="imagenes/insignia.jpg" style="width:50%;" class=" img-thumbnail mImg">								
+								<h4 class="tPrincipal colorLetra centrar">
+									Para indicar la cantidad de elementos que usamos, en este caso fueron 7. 
+								</h4>
+						</div>
+					</div>
+				</div>
+		</div>
+
+		<div class="modal fade" id="miModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h3 class="modal-title  tPrincipal centrar">Modal</h3>
+						</div>
+						<div class="modal-body animated flipInX" >
+															
+								<h4 class="tPrincipal colorLetra centrar">
+									Esta ventana flotante, es un modal utilizado, así mismo también en el contenedor de los datos del estudiante. 
+								</h4>
+						</div>
+					</div>
+				</div>
+		</div>
+
+		<div class="modal fade" id="miModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h3 class="modal-title  tPrincipal centrar">Herramientas Responsivas</h3>
+						</div>
+						<div class="modal-body animated flipInX" >
+								<img src="imagenes/responsivas.jpg" style="width:80%;margin-left:50px; margin-right:50px;" class=" img-thumbnail mImg">								
+								<h4 class="tPrincipal colorLetra centrar">
+									Es agregar clases para que el contenido se vaya adaptando según sea el tamaño del dispositivo donde se habra el sitio web.
+								</h4>
+						</div>
+					</div>
+				</div>
+		</div>
+
+		<div class="modal fade" id="miModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h3 class="modal-title  tPrincipal centrar">Sidebar</h3>
+						</div>
+						<div class="modal-body animated flipInX" >
+															
+								<h4 class="tPrincipal colorLetra centrar">
+									Es el que contiene el menú lateral, en donde se muestra la ventana en donde actualmente estamos así como el dropdown de las herramientas utilizadas.
+								</h4>
+						</div>
+					</div>
+				</div>
+		</div>
+		
+		<div class="modal fade" id="miModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h3 class="modal-title  tPrincipal centrar">Botón Dropdown</h3>
+						</div>
+						<div class="modal-body animated flipInX" >
+								<img src="imagenes/dropdown.jpg" style="width:20%;margin-left:50px; margin-right:50px;" class=" img-thumbnail mImg">								
+								<h4 class="tPrincipal colorLetra centrar">
+									Al oprimir dicho botón que se encuentra dentro del sidebar, despliega un menú con diferentes opciones que son enlaces.En este caso despliega las herramientas que utilizamos.
+								</h4>
+						</div>
+					</div>
+				</div>
+		</div>
+
+		<div class="modal fade" id="miModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h3 class="modal-title  tPrincipal centrar">Tipografía de Textos</h3>
+						</div>
+						<div class="modal-body animated flipInX" >															
+								<h4 class="tPrincipal colorLetra centrar">
+									Es evidente que no todo el contenido de dicha página es igual y es ahí donde se aplica la tipografía.
+								</h4>
+						</div>
+					</div>
+				</div>
+		</div>
+
+	<!-- SCRIPT JAVASCRIPT -->
+
+	<!-- jquery -->
+	<script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+	<!-- alertify -->
+	<script src="plugins/alertifyjs/alertify.js"></script>
+	<!-- bootstrap -->
+	<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!-- preloaders -->
+	<script src="plugins/Preloaders/jquery.preloaders.js"></script>
+	<!-- bootstrap-toggle-master -->
+	<script src="plugins/bootstrap-toggle-master/doc/script.js"></script>
+	<script src="plugins/bootstrap-toggle-master/js/bootstrap-toggle.js"></script>
+	<!-- Scripts personalizados -->
+	<script src="js/menu.js"></script>
+	<script src="js/precarga.js"></script>
+	<script src="js/salir.js"></script>
+
+</body>
+</html>
